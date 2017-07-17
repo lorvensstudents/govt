@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Primeminesters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duriation</th>
+      <th>Discription</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @primeminesters.each do |primeminester| %>
+      <tr>
+        <td><%= primeminester.name %></td>
+        <td><%= primeminester.duriation %></td>
+        <td><%= primeminester.discription %></td>
+        <td><%= link_to 'Show', primeminester %></td>
+        <td><%= link_to 'Edit', edit_primeminester_path(primeminester) %></td>
+        <td><%= link_to 'Destroy', primeminester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Primeminester', new_primeminester_path %>

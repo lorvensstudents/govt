@@ -1,0 +1,2 @@
+class Primeminester < ApplicationRecord
+end

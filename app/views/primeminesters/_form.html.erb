@@ -1,0 +1,32 @@
+<%= form_with(model: primeminester, local: true) do |form| %>
+  <% if primeminester.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(primeminester.errors.count, "error") %> prohibited this primeminester from being saved:</h2>
+
+      <ul>
+      <% primeminester.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :primeminester_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duriation %>
+    <%= form.text_field :duriation, id: :primeminester_duriation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discription %>
+    <%= form.text_area :discription, id: :primeminester_discription %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module PrimeminestersHelper
+end
